@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:baseForm="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/NAV_J44/1.15"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/NAV_J44/1.15">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
+           schemaLocation="baseForm.xsd"/>
+   <element name="Doc_NAV_J44"
+            type="tns:Doc_NAV_J44_Type"
+            meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>Jogorvoslati kérelem, kifogás jövedéki ügyekben</documentation>
+      </annotation>
+      <xs:unique name="uniqueFileId_Attachment_1">
+         <xs:selector xpath="Form_NAV_J44/Attachment_1"/>
+         <xs:field xpath="fileId"/>
+      </xs:unique>
+   </element>
+   <complexType name="Doc_NAV_J44_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_NAV_J44"
+                  type="tns:Form_NAV_J44_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>NAV_J44 részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <simpleType name="Enum_NAV_J44_0A0001G001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=Fellebbezés (Air. 124. §)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=Felügyeleti intézkedés iránti kérelem (Air. 128. §)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=Kifogás lefoglalás elrendelése ellen (Jöt. 102. § (2) bekezdés)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4=Kifogás csomagküldemény visszatartása ellen (Jöt. 98. § (3) bekezdés</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_NAV_J44_0A0001G003A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="HU311500">
+            <annotation>
+               <documentation>HU311500=NAV Bács-Kiskun Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU211000">
+            <annotation>
+               <documentation>HU211000=NAV Baranya Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU521000">
+            <annotation>
+               <documentation>HU521000=NAV Békés Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU150000">
+            <annotation>
+               <documentation>HU150000=NAV Bevetési Igazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU411000">
+            <annotation>
+               <documentation>HU411000=NAV Borsod-Abaúj-Zemplén Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU511000">
+            <annotation>
+               <documentation>HU511000=NAV Csongrád-Csanád Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU101000">
+            <annotation>
+               <documentation>HU101000=NAV Dél-Budapesti Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU170000">
+            <annotation>
+               <documentation>HU170000=NAV Észak-budapesti Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU821000">
+            <annotation>
+               <documentation>HU821000=NAV Fejér Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU611000">
+            <annotation>
+               <documentation>HU611000=NAV Győr-Moson-Sopron Vármegyei Adó-és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU711000">
+            <annotation>
+               <documentation>HU711000=NAV Hajdú-Bihar Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU421000">
+            <annotation>
+               <documentation>HU421000=NAV Heves Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU321000">
+            <annotation>
+               <documentation>HU321000=NAV Jász-Nagykun-Szolnok Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU160000">
+            <annotation>
+               <documentation>HU160000=NAV Kelet-budapesti Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU102000">
+            <annotation>
+               <documentation>HU102000=NAV Kiemelt Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU621000">
+            <annotation>
+               <documentation>HU621000=NAV Komárom-Esztergom Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU831000">
+            <annotation>
+               <documentation>HU831000=NAV Nógrád Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU811000">
+            <annotation>
+               <documentation>HU811000=NAV Pest Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU121000">
+            <annotation>
+               <documentation>HU121000=NAV Repülőtéri Igazgatóság</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU221000">
+            <annotation>
+               <documentation>HU221000=NAV Somogy Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU721000">
+            <annotation>
+               <documentation>HU721000=NAV Szabolcs-Szatmár-Bereg Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU190000">
+            <annotation>
+               <documentation>HU190000=NAV Szakértői Intézete</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU231000">
+            <annotation>
+               <documentation>HU231000=NAV Tolna Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU911000">
+            <annotation>
+               <documentation>HU911000=NAV Vas Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU631000">
+            <annotation>
+               <documentation>HU631000=NAV Veszprém Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="HU921000">
+            <annotation>
+               <documentation>HU921000=NAV Zala Vármegyei Adó- és Vámigazgatósága</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <complexType name="Form_NAV_J44_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány NAV_J44 részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120001"
+                  type="tns:Block_NAV_J44_120001_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Azonosító adatok</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120010"
+                  type="tns:Block_NAV_J44_120010_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Kérelem, kifogás típusa</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120008"
+                  type="tns:Block_NAV_J44_120008_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Aláírás</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120005"
+                  type="tns:Block_NAV_J44_120005_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Beadvány szövege</documentation>
+            </annotation>
+         </element>
+         <element name="Attachment_1"
+                  type="baseForm:AttachmentType"
+                  minOccurs="0"
+                  maxOccurs="unbounded"
+                  meta:metaType="AttachmentMetaType">
+            <annotation>
+               <documentation>Csatolmány; File Extensions:*</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_NAV_J44_120001_Type">
+      <annotation>
+         <documentation>Azonosító adatok</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120002"
+                  type="tns:FieldGroup_NAV_J44_120002_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Azonosító adatok</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_NAV_J44_120010_Type">
+      <annotation>
+         <documentation>Kérelem, kifogás típusa</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120003"
+                  type="tns:FieldGroup_NAV_J44_120003_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Kérelem, kifogás típusa</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_NAV_J44_120008_Type">
+      <annotation>
+         <documentation>Aláírás</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120009"
+                  type="tns:FieldGroup_NAV_J44_120009_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Aláírás</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_NAV_J44_120005_Type">
+      <annotation>
+         <documentation>Beadvány szövege</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120015"
+                  type="tns:Chain_NAV_J44_120015_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Beadvány szövege</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Chain_NAV_J44_120015_Type">
+      <annotation>
+         <documentation>Beadvány szövege</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_header" minOccurs="0">
+            <annotation>
+               <documentation>Lánc nem ismétlődő elemei (felületen előtte vagy utána jelennek meg)</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120016"
+                           type="tns:FieldGroup_NAV_J44_120016_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Egyedi lánc eleme elől</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="999">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120007"
+                           type="tns:FieldGroup_NAV_J44_120007_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Beadvány szövege</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="FieldGroup_NAV_J44_120002_Type">
+      <annotation>
+         <documentation>Azonosító adatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001F001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószám (IKTATO.ADOIG)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adóazonosító jel (IKTATO.ADOAZON)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Név (IKTATO.NEV)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Irányítószám (IKTATO.IRSZAM)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="8"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>város/község (IKTATO.VAROS)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>cím / helyrajzi szám (IKTATO.CIM)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_NAV_J44_120003_Type">
+      <annotation>
+         <documentation>Kérelem, kifogás típusa</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001G001A"
+                  minOccurs="0"
+                  type="tns:Enum_NAV_J44_0A0001G001A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérelem típusa/kifogás típusa (iktato.biztip)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001G002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ (___38174)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="256"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001G003A"
+                  minOccurs="0"
+                  type="tns:Enum_NAV_J44_0A0001G003A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jogorvoslattal/ kifogással érintett döntést meghozó NAV igazgatóság (fej.cimzett_vhkod)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001G004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ (___38206)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="300"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001G005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jogorvoslattal/ kifogással érintett döntés iktatószáma (IKTATO.HIVAZON)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001G006A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hiánypótlás (sHIANYPOTLAS)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001G007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hiánypótlásra felszólítás iktatószáma (IKTATO.KAPCSIKTSZ)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_NAV_J44_120009_Type">
+      <annotation>
+         <documentation>Aláírás</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001H001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Helység (kelthely)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001H002A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Dátum (IKTATO.BKELT)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001H003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bejelentő azonosító (XML_ABEV.BEJELENT_ADOAZON)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001H00500A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bejelentett, a nyomtatvány aláírására jogosult állandó meghatalmazás jelölése: (all_meghat)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001H00501A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Eseti meghatalmazás csatolásának jelölése: (eseti_meghat)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_NAV_J44_120007_Type">
+      <annotation>
+         <documentation>Beadvány szövege</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Beadvány szövege (v_nat_jog_ker.kerelem)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="999"/>
+                  <pattern value="[\t\n\r\P{C}]*[^\s][\t\n\r\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_NAV_J44_120016_Type">
+      <annotation>
+         <documentation>Egyedi lánc eleme elől</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXB004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ (01_lapszam)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="3"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
